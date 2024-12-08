@@ -15,7 +15,16 @@ public class Pair<T,U>{
         return second;
     }
     
-    public boolean equals(Pair<T,U> pair){ 
-        return this.first == pair.first && this.second == pair.second;
+    @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Pair<?,?> pair){
+            return this.first.equals(pair.first) && this.second.equals(pair.second);
+        }
+        return false;
+    }
+
+    @Override
+    public String toString(){
+        return first.toString() + "," + second.toString();
     }
 }

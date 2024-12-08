@@ -49,7 +49,7 @@ void main(){
                     x -> x.getSecond().getSecond().getNextState(x.getSecond()))
                 .reduce(start, (x,y) -> y);
         System.out.println(end.getSecond().getSecond().getNextState(end.getSecond()).getSecond().getSecond().getWalked());
-
+        System.out.println(map.getWays(guard));
 
     }catch(FileNotFoundException e){
         System.out.println("sad");
