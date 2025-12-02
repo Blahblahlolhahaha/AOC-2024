@@ -32,36 +32,21 @@ int main(int argc, char** argv){
             if(neg){
                 sad *= -1;
             }
-//            for(int i = 0; i < abs(sad); i++){
-//                if(neg){
-//                    start--;
-//                }
-//                else{
-//                    start++;
-//                }
-//                if(start == 100 || start == 0){
-//                    res++;
-//                }
-//                if(start >= 100){
-//                    start -= 100;
-//                }
-//                else if(start < 0){
-//                    start += 100;
-//                }
-//            }
-            int prev = start;
-            res += abs((int)(sad / 100));
-            sad -= sad - (sad % 100);
-            start = (start + sad);
-            if(sad != 0){
-                if( start >= 100 || start < 0){
-                    res++;
-                }
-                if(start < 0){
-                    start += 100;
+            for(int i = 0; i < abs(sad); i++){
+                if(neg){
+                    start--;
                 }
                 else{
-                    start = start % 100;
+                    start++;
+                }
+                if(start == 100 || start == 0){
+                    res++;
+                }
+                if(start >= 100){
+                    start -= 100;
+                }
+                else if(start < 0){
+                    start += 100;
                 }
             }
             memset(line, 0, 10);
