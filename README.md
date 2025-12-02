@@ -1,2 +1,2 @@
-# AOC 2024
- My Code for Advent of Code 2024!
+# AOC
+ My Code for Advent of Code!
